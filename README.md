@@ -2,7 +2,7 @@
 This is simple calculater for transfer function of Differential Mobility Analyzer (DMA).  
 
 # DEMO
- 
+![Figure_1-3](https://user-images.githubusercontent.com/75816343/108619820-beb7bd00-746a-11eb-8c36-09a9662c243c.png)
  
 # Features
  This calculater is easy to use and simple. I supose that this is useful to understand the DMA transfer function.
