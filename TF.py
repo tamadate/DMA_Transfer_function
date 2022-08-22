@@ -81,7 +81,7 @@ def OMEGA(Qs,Qa,L,rin,rout,dp,file_name):
 		Dp[i]=functions.dp_from_Zp(Zp[i])
 		f.write(str(Zp_tilde[i])+"\t"+str(Dp[i])+"\t"+str(Zp[i])+"\t"+str(omega1[i])+"\t"+str(omega2[i])+"\n")
 		f.close
-	
+
 	plt.plot(Dp*1e9,omega1)
 	plt.plot(Dp*1e9,omega2, "--")
 	plt.xlabel("Particle diameter [nm]")
@@ -168,9 +168,3 @@ def peak_FWHM(Qs,Qa,L,rin,rout,Vmin,Vmax,dp,file_name):
 
 	plt.show()
 	return 0
-
-
-
-	
-	
-	

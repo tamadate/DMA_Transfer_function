@@ -1,4 +1,4 @@
-import Tkinter as tk
+import tkinter as tk
 import numpy as np
 import math
 import V_Dp
@@ -50,12 +50,12 @@ def nanoDMA():
 
 
 
-
-
 window=tk.Tk()
 window.title("DMA calculater")
 window.geometry("350x450")
 
+Labels=["DMA length","DMA inner radius","DMA outer radius","Aerosol flow rate","Seath flow rate","Minimum voltage","Maximum voltage","Diameter","Output file"]
+Units=["mm","mm","mm","L/min","L/min","V","V","nm"]
 L_l=tk.Label(text="DMA Length")
 L_e=tk.Entry(width=15)
 rin_l=tk.Label(text="DMA inner radius")
@@ -68,7 +68,7 @@ Qs_l=tk.Label(text="Seath flow rate")
 Qs_e=tk.Entry(width=15)
 Vmin_l=tk.Label(text="Minimum voltage")
 Vmin_e=tk.Entry(width=15)
-Vmax_l=tk.Label(text="Maxmun voltage")
+Vmax_l=tk.Label(text="Maximun voltage")
 Vmax_e=tk.Entry(width=15)
 center_dp_l=tk.Label(text="Diameter")
 center_dp_e=tk.Entry(width=15)
@@ -130,9 +130,3 @@ input_slenderDMA.place(x=10, y=370)
 
 
 window.mainloop()
-
-
-
-
-
-
