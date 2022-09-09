@@ -3,14 +3,14 @@ import numpy as np
 from scipy.optimize import minimize
 
 def Cc(dp):
-	ramda=67.0e-9
+	lamda=67.0e-9
 	ap=dp/2.0
-	return 1+ramda/ap*(1.257+0.4*np.exp(-1.1*ap/ramda))
+	return 1+lamda/ap*(1.257+0.4*np.exp(-1.1*ap/lamda))
 
 def Zp_from_dp(dp):
-	ramda=67.0e-9
+	lamda=67.0e-9
 	ap=dp/2.0
-	Cc=1+ramda/ap*(1.257+0.4*np.exp(-1.1*ap/ramda))
+	Cc=1+lamda/ap*(1.257+0.4*np.exp(-1.1*ap/lamda))
 	myu=1.822e-5
 	return Cc*1.6e-19/(3*math.pi*myu*dp)
 
@@ -26,4 +26,3 @@ def dp_from_Zp(Zp):
 		return ((Zp_from_dp(dp)-Zp)*1e10)**2
 	result=minimize(dZp2,1e-9,method="Nelder-Mead")
 	return(result.x[0])
-
